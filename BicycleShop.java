@@ -32,12 +32,8 @@ public class BicycleShop {
         return products;
     }
 
-    public Map.Entry<String,Product> getProduct(String id) {
-        for(Map.Entry<String, Product> map: products.entrySet()) {
-            if (map.getKey().equals(id))
-                return map;
-        }
-        return null;
+    public Product getProduct(String id) {
+        return products.get(id);
     }
 
     public void print() {
